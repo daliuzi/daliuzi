@@ -1,151 +1,18 @@
-<!DOCTYPE html>
-<html>
+include _views/post
+include _views/menu
+extends _views/main
 
-<head>
-  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-  <title>乐视EUI关闭按键灯 | Hanzi</title>
-  <meta name="description" content="博客正在格式化" />
-  <meta name="HandheldFriendly" content="True" />
-  <meta name="MobileOptimized" content="320" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" type="text/css" href="/css/screen.css" />
-  <link rel="stylesheet" type="text/css" href="/css/style.css" />
-  <meta name="generator" content="Hanzi">
+block main
+  +post(page, 'post')
+  if config.disqus_shortname && page.comments
+    div.comments
+      div#disqus_thread
+        noscript.
+          Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
 
-  
-  
-  
+block head
+  title
+    = page.title + ' - ' + config.title
 
-  
-</head>
-
-<!--
-<body class="post-template">
--->
-<body class="home-template">
-<div id="perspective" class="perspective effect-movedown">
-  <div class="container">
-    <!-- wrapper -->
-    <div class="wrapper">
-
-      <header class="site-head"  style="background: #24282b url(/img/img-bg.jpg) 0 -20%" >
-    <div class="vertical">
-        <div class="site-head-content inner">
-             <a class="blog-logo" href="/"><img src="/img/logo.svg" alt="Blog Logo"/></a> 
-            <h1 class="blog-title">Hanzi</h1>
-            <h2 class="blog-description">博客正在格式化<button id="showMenu">Show Menu</button></h2>
-        </div>
-    </div>
-</header>
-
-      
-
-<main class="content" role="main">
-  <article class="post">
-    <span class="post-meta">
-      <time datetime="2016-09-08T13:45:27.000Z" itemprop="datePublished">
-          2016-09-08
-      </time>
-    
-    
-    | 
-    <a href='/tags/乐视1s/'>乐视1s</a>
-    
-    
-</span>
-    <h1 class="post-title">乐视EUI关闭按键灯</h1>
-    <section class="post-content">
-      <p>手上的这款乐视1s按键灯在夜晚状态下透光严重，所以想关掉它，无奈系统中并未有此选项，所以，在智友论坛看到了一篇教程《<a href="http://bbs.zhiyoo.com/thread-12423593-1-2.html" target="_blank" rel="external">小白教程 | 简单3步 无需繁杂步骤！</a>》，使用后有效，开启按键震动，看起来舒服很多。<br><a id="more"></a><br><img src="https://source.daliuzi.cn/picture/20160902343.png" alt="乐视1s" title="乐视1s"></p>
-<h2 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h2><p>首先手机需要root，乐视1s可参见上篇文章《<a href="http://daliuzi.cn/le1s-recovery-root/" target="_blank" rel="external">乐视1s刷第三方Recovery获取Root权限</a>》</p>
-<h2 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h2><p>安装RE管理器，可在应用商店下载</p>
-<h2 id="第三步"><a href="#第三步" class="headerlink" title="第三步"></a>第三步</h2><p>按照路径找到<code>sys/class/leds/button-backlight/brightness</code></p>
-<h2 id="第四步"><a href="#第四步" class="headerlink" title="第四步"></a>第四步</h2><p>brightness文件设置为全读，全执行，保存即可关闭按键灯，重启后会失效。</p>
-<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>用Hexo发布的第一篇文章，试下水。。。。</p>
-
-    </section>
-    <footer class="post-footer">
-      <section class="author">
-    <h4>Hank</h4>
-    <p>作为挨踢业的伪设计狮伪技术牛 搬过砖也种过地：爱看、爱听、爱玩儿、爱折腾、机械水电、泥瓦木匠啥都来</p>
-</section>
-      <section class="share">
-    <h4>Share this post</h4>
-    <a class="icon-sina-weibo" href="http://v.t.sina.com.cn/share/share.php?title=作为挨踢业的伪设计狮伪技术牛 搬过砖也种过地：爱看、爱听、爱玩儿、爱折腾、机械水电、泥瓦木匠啥都来 ?url=http://hanzi.ml/eui-close-button-backlight/" target="_blank">
-        <span class="hidden">weibo</span>
-    </a>
-    <a class="icon-twitter" href="http://twitter.com/share?url=http://hanzi.ml/eui-close-button-backlight/"
-       onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
-        <span class="hidden">Twitter</span>
-    </a>
-    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://hanzi.ml/eui-close-button-backlight/"
-       onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
-        <span class="hidden">Facebook</span>
-    </a>
-    <a class="icon-google-plus" href="https://plus.google.com/share?url=http://hanzi.ml/eui-close-button-backlight/"
-       onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
-        <span class="hidden">Google+</span>
-    </a>
-</section>
-
-    </footer>
-  </article>
-  <nav class="pagination" role="pagination">
-    
-    <span class="icon-logo">•</span>
-    
-    <a class="older-posts" href="/frozen-qq-say-baybay/">
-        腾讯QQ账号被永久冻结 →
-    </a>
-    
-</nav>
-
-  <div id="comment" class="comments-area">
-    <h4 class="title"><a href="#disqus_comments" name="disqus_comments">Comments</a></h4>
-    
-</div>
-
-</main>
-
-
-      
-<footer class="site-footer">
-  
-  <div class="inner">
-     <section class="copyright">All content copyright <a href="/">Hanzi</a> &copy; 2014 &bull; All rights reserved.</section>
-     <section class="poweredby">Proudly published with <a class="icon-ghost" href="http://zespia.tw/hexo/">Hexo</a></section>
-  </div>
-</footer>
-
-      <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-<script type="text/javascript" src="/js/jquery.fitvids.js"></script>
-<script type="text/javascript" src="/js/index.js"></script>
-<script type="text/javascript" src="/js/menu.js"></script>
-
-
-
-
-
-  </div>
-</div>
-
-<nav  class="outer-nav top horizontal">
-
-          <a class="icon-home"  href="/"><span>Home</span></a>
-
-          <a class="icon-news"  href="/archive"><span>Archive</span></a>
-
-          <a class="icon-image"  href="/images"><span>Images</span></a>
-
-          <a class="icon-wiki"  href="/wiki/2014-10-28-wiki/"><span>Wiki</span></a>
-
-          <a class="icon-Favorites"  href="/favorites"><span>Favorites</span></a>
-
-          <a class="icon-mail"  href="/about/2014-09-11-mabao/"><span>Contact</span></a>
-
-</nav>
-
-</div>
-</body>
-</html>
+block menu
+  +menu('post')
