@@ -20,49 +20,6 @@
     
 */
 
-
-
-/*  Fonts  */
-@font-face {
-    font-family: 'raleway-regular';
-    src: url('../fonts/raleway-regular.eot');
-    src: url('../fonts/raleway-regular.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/raleway-regular.woff') format('woff'),
-         url('../fonts/raleway-regular.ttf') format('truetype'),
-         url('../fonts/raleway-regular.svg#ralewayregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-
-@font-face {
-    font-family: 'raleway-bold';
-    src: url('../fonts/raleway-bold.eot');
-    src: url('../fonts/raleway-bold.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/raleway-bold.woff') format('woff'),
-         url('../fonts/raleway-bold.ttf') format('truetype'),
-         url('../fonts/raleway-bold.svg#ralewaybold') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-
-@font-face {
-    font-family: 'raleway-semibold';
-    src: url('../fonts/raleway-semibold.eot');
-    src: url('../fonts/raleway-semibold.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/raleway-semibold.woff') format('woff'),
-         url('../fonts/raleway-semibold.ttf') format('truetype'),
-         url('../fonts/raleway-semibold.svg#ralewaysemibold') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-
-
 /*  General CSS*/
 body{
     background: #fff;
@@ -84,7 +41,7 @@ header nav ul li a{
 
 h1, h2, h3, h4, h5 ,h6{
     color: #4b4848;
-    font-family: "raleway-regular", arial;
+    font-family: "Microsoft Yahei","Helvetica Neue",Helvetica,Arial,sans-serif;
     letter-spacing: 1px;
 }
 
@@ -132,7 +89,7 @@ h5, h6          { font-weight: bolder }
     header .logo a, header .logo a:active, header .logo a:visited {
         text-decoration: none;
         text-transform: uppercase;
-        font-family: 'raleway-regular';
+        font-family: "Microsoft Yahei","Helvetica Neue",Helvetica,Arial,sans-serif;
         color: #454545;
         font-size: 1.5em;
     }
@@ -157,7 +114,7 @@ h5, h6          { font-weight: bolder }
 
     header nav ul li a{
         color: #454545;
-        font-family: "raleway-regular", arial;
+        font-family: "Microsoft Yahei","Helvetica Neue",Helvetica,Arial,sans-serif;
         font-size: 14px;
         text-decoration: none;
         letter-spacing: 1px;
@@ -234,14 +191,14 @@ h5, h6          { font-weight: bolder }
 
     header .rights p{
         color: #454545;
-        font-family: "raleway-regular", arial;
+        font-family: "Microsoft Yahei","Helvetica Neue",Helvetica,Arial,sans-serif;
         font-size: 11px;
         letter-spacing: 1px;
         line-height: 18px;
     }
 
     header .rights a{
-        font-family: "raleway-bold", arial;
+        font-family: "Microsoft Yahei","Helvetica Neue",Helvetica,Arial,sans-serif;
         font-weight: bold;
         text-decoration: none;
     }
@@ -307,7 +264,7 @@ h5, h6          { font-weight: bolder }
 
 .main .pagination {
     display: inline-block;
-    font-family: "raleway-regular", arial;
+    font-family: "Microsoft Yahei","Helvetica Neue",Helvetica,Arial,sans-serif;
     width: auto;
     height: auto;
     letter-spacing: .01em;
@@ -366,7 +323,7 @@ h5, h6          { font-weight: bolder }
     padding: 20px 0;
     z-index: 77;
     color: #454545;
-    font-family: "raleway-regular", arial;
+    font-family: "Microsoft Yahei","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 16px;
     letter-spacing: .5px;
     border-bottom: 1px solid #bfbbbb;
@@ -485,7 +442,7 @@ h5, h6          { font-weight: bolder }
 .top .title{
     display: block;
     width: 100%;color: #4b4848;
-    font-family: "raleway-bold", arial;
+    font-family: "Microsoft Yahei","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 26px;
     font-weight: bold;
     background: rgba(255, 255, 255, .7);
@@ -512,7 +469,7 @@ h5, h6          { font-weight: bolder }
 
 .content{
     color: #4b4848;
-    font-family: "raleway-regular", arial;
+    font-family: "Microsoft Yahei","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 15px;
     line-height: 22px;
     padding: 60px 30px;
@@ -531,7 +488,7 @@ h5, h6          { font-weight: bolder }
 
 .content p{
     color: #4b4848;
-    font-family: "raleway-regular", arial;
+    font-family: "Microsoft Yahei","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 15px;
     line-height: 24px;
     margin-bottom: 25px;
@@ -544,7 +501,7 @@ h5, h6          { font-weight: bolder }
 .content h5,
 .content h6{
     color: #4b4848;
-    font-family: "raleway-semibold", arial;
+    font-family: "Microsoft Yahei","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: bold;
     line-height: 28px;
     margin-bottom: 20px;
@@ -565,7 +522,7 @@ h5, h6          { font-weight: bolder }
     margin-left: 45px;
     text-decoration: none;
     text-transform: uppercase;
-    font-family: 'raleway-regular';
+    font-family: "Microsoft Yahei","Helvetica Neue",Helvetica,Arial,sans-serif;
     color: #454545;
     font-size: 1.5em;
     margin-bottom: 50px;
@@ -595,7 +552,7 @@ h5, h6          { font-weight: bolder }
     padding: 7px 10px;
     background: #454545;
     color: #fff;
-    font-family: "raleway-regular", arial;
+    font-family: "Microsoft Yahei","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 12px;
     position: absolute;
     white-space: nowrap;
@@ -639,7 +596,7 @@ h5, h6          { font-weight: bolder }
     header .logo a, header .logo a:active, header .logo a:visited {
         text-decoration: none;
         text-transform: uppercase;
-        font-family: 'raleway-regular';
+        font-family: "Microsoft Yahei","Helvetica Neue",Helvetica,Arial,sans-serif;
         color: #454545;
         font-size: 1.5em;
     }
@@ -678,7 +635,7 @@ h5, h6          { font-weight: bolder }
         padding: 30px 0;
         text-align: center;
         color: #454545;
-        font-family: "raleway-regular", arial;
+        font-family: "Microsoft Yahei","Helvetica Neue",Helvetica,Arial,sans-serif;
         font-size: 14px;
         text-decoration: none;
         border-top: 1px solid #f7f5f5;
