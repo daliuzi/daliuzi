@@ -354,7 +354,6 @@ h5, h6          { font-weight: bolder }
     line-height: 1.42857143;
     background-color: #fff;
     border: 1px solid #ddd;
-    border-radius: 4px;
 }
 
 .main .tags a, .main .tags a:visited, .main .tags a:active{
@@ -362,7 +361,6 @@ h5, h6          { font-weight: bolder }
     background: #fff;
     width: auto;
     height: auto;
-    border-radius: 3px;
     letter-spacing: .01em;
     cursor: pointer;
     margin: 0 4px 7px 0;
