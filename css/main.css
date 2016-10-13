@@ -735,7 +735,6 @@ figure.highlight,
     line-height: 1.3em;
     padding-top: 15px;
     padding-bottom: 15px;
-    overflow: scroll;
 }
 figure.highlight table,
 .codeblock table {
@@ -789,7 +788,6 @@ figure.highlight .code,
 }
 figure.highlight .code pre,
 .codeblock .code pre {
-    max-width: calc(750px - 50px);
     overflow-x: auto;
     overflow-y: hidden;
 }
