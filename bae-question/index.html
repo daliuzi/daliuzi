@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+
+    <!--Description-->
+    
+        <meta name="description" content="红红火火恍恍惚惚">
+    
+
+    <!--Favicon-->
+    <link rel="shortcut icon" href="/favicon.png">
+
+    <!--Author-->
+    
+        <meta name="author" content="Hank">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="使用百度Bae遇到的问题及解决方法"/>
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="Hanzi"/>
+
+    <!--Page Cover-->
+    
+        <meta property="og:image" content="undefined"/>
+    
+
+    <!-- Title -->
+    
+    <title>使用百度Bae遇到的问题及解决方法 - Hanzi</title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/main.css">
+
+    <!--[if lt IE 9]>
+
+	<script src="/js/html5shiv.js"></script>
+	<script src="/js/respond.min.js"></script>
+
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link rel="stylesheet" href="/css/featherlight.min.css">
+
+    <!-- Google Analytics -->
+    
+
+
+</head>
+
+<body>
+
+<!-- Menu -->
+<!-- Navigation -->
+<header>
+    <div class="logo">
+        <a href="/">Hanzi</a>
+    </div><!-- end logo -->
+
+    <div id="menu_icon"></div>
+    <nav>
+        <ul>
+            
+            <li>
+                <a href="/">首页</a>
+            </li>
+            
+            <li>
+                <a href="/archives">归档</a>
+            </li>
+            
+        </ul>
+    </nav><!-- end navigation menu -->
+
+    <div class="footer clearfix">
+        <ul class="social clearfix">
+            
+                <li><a href="https://www.facebook.com/" class="twitter" target="_blank" data-title="Twitter"></a></li>
+            
+            
+                <li><a href="https://www.facebook.com/" class="fb" target="_blank" data-title="Facebook"></a></li>
+            
+            
+                <li><a href="https://www.behance.net/" class="behance" target="_blank" data-title="Behance"></a></li>
+            
+            
+                <li><a href="https://plus.google.com/+Pixelhint/posts" class="google" target="_blank" data-title="Google+"></a></li>
+            
+            
+                <li><a href="https://dribbble.com/pixelhint" class="dribble" target="_blank" data-title="Dribble"></a></li>
+            
+            
+        </ul><!-- end social -->
+
+        <div class="rights">
+            <p>©2014 - 2016 · 托管于GITHUB</p>
+            <p>Theme by <a target="_blank" href="https://hexo.io" rel="nofollow" >HEXO</a> & <a target="_blank" href="https://github.com/klugjo/hexo-theme-magnetic" rel="nofollow" >magnetic</a></p>
+        </div><!-- end rights -->
+    </div ><!-- end footer -->
+</header><!-- end header -->
+
+<!-- Main Content -->
+<section class="main clearfix">
+
+    <section class="top" style="background: url('/img/1300x500.jpg');">
+        <div class="wrapper content_header clearfix">
+            
+
+<div class="work_nav">
+
+    <ul class="btn clearfix">
+        
+        <li><a class="previous disabled"></a></li>
+        
+        <li><a href="/" class="grid" data-title="首页"></a></li>
+        
+        <li><a href="/hello-world/" class="next" data-title="Hello World"></a></li>
+        
+    </ul>
+
+</div><!-- end work_nav -->
+            <h1 class="title">使用百度Bae遇到的问题及解决方法</h1>
+        </div>
+    </section><!-- end top -->
+
+    <section class="wrapper">
+        <div class="content">
+
+            <!-- Gallery -->
+            
+
+            <!-- Content -->
+            <p>使用BAE有小段时间了，写一下使用百度Bae遇到的问题及解决方法</p>
+<h3 id="1-使用Git发布时提示如下"><a href="#1-使用Git发布时提示如下" class="headerlink" title="1.使用Git发布时提示如下"></a>1.使用Git发布时提示如下</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">$ git push</div><div class="line">Counting objects: <span class="number">1620</span>, done.</div><div class="line">Delta compression using up to <span class="number">2</span> threads.</div><div class="line">Compressing objects: <span class="number">100</span>% (<span class="number">1592</span>/<span class="number">1592</span>), done.</div><div class="line"><span class="attr">error:</span> RPC failed; HTTP <span class="number">411</span> curl <span class="number">22</span> The requested URL returned error: <span class="number">411</span> Length Required</div><div class="line"><span class="attr">fatal:</span> The remote end hung up unexpectedly</div><div class="line">Writing objects: <span class="number">100</span>% (<span class="number">1620</span>/<span class="number">1620</span>), <span class="number">23.54</span> MiB | <span class="number">13.99</span> MiB/s, done.</div><div class="line">Total <span class="number">1620</span> (delta <span class="number">114</span>), reused <span class="number">0</span> (delta <span class="number">0</span>)</div><div class="line"><span class="attr">fatal:</span> The remote end hung up unexpectedly</div><div class="line">Everything up-to-date</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<p>Push文件过大，在.git/config 文件中加入</p>
+<p>Windows:<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[http]</div><div class="line">    postBuffer = <span class="number">524288000</span></div></pre></td></tr></table></figure></p>
+<p>linux:<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git config http.postBuffer <span class="number">52428800</span></div></pre></td></tr></table></figure></p>
+<h3 id="2-发布过程太麻烦，批处理一键搞定"><a href="#2-发布过程太麻烦，批处理一键搞定" class="headerlink" title="2.发布过程太麻烦，批处理一键搞定"></a>2.发布过程太麻烦，批处理一键搞定</h3><p>在.git/config 文件中加入，之后直接输入 Git blog 就可以实现版本发布了<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[alias]</div><div class="line">    blog = !git add . &amp;&amp; git commit -m <span class="string">'blog update'</span> &amp;&amp; git push</div></pre></td></tr></table></figure></p>
+<p>然后新建cmd，键入以下内容</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">G:</div><div class="line"><span class="built_in">cd</span> appidbdxxxxxxxx(每个人的都不同)</div><div class="line">git blog</div></pre></td></tr></table></figure>
+<p>之后本地改动文件后，打开新建的cmd文件就可以直接发布了。</p>
+<h3 id="3-伪静态的问题，修改app-conf文件"><a href="#3-伪静态的问题，修改app-conf文件" class="headerlink" title="3.伪静态的问题，修改app.conf文件"></a>3.伪静态的问题，修改app.conf文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div></pre></td><td class="code"><pre><div class="line">########################## BAE application config file ######################</div><div class="line">#</div><div class="line"># app.conf 采用YAML格式， 请参考 http://yaml.org/</div><div class="line"># 请尽量不要在配置部分使用中文，以免发布失败</div><div class="line"># 请不要使用TAB键，应该使用空格</div><div class="line"># 一定要注意对齐，否则发布会失败</div><div class="line"># app.conf 详细功能，请参考：</div><div class="line">#  http://bce.baidu.com/doc/BAE/GUIGettingStarted.html#.E9.85.8D.E7.BD.AEapp.conf</div><div class="line">#  http://godbae.duapp.com/?p=654</div><div class="line">#</div><div class="line">##############################################################################</div><div class="line"></div><div class="line">handlers:</div><div class="line"> - url : (.*)\.css$</div><div class="line">   script : $1.css</div><div class="line"> - url : (.*)\.js$</div><div class="line">   script : $1.js</div><div class="line"> - url : (.*)\.woff$</div><div class="line">   script : $1.woff</div><div class="line"> - url : (.*)\.ttf$</div><div class="line">   script : $1.ttf</div><div class="line"> - url : (.*)\.svg$</div><div class="line">   script : $1.svg</div><div class="line"> - url : (.*)\.otf$</div><div class="line">   script : $1.otf</div><div class="line"> - url : (.*)\.eot$</div><div class="line">   script : $1.eot</div><div class="line"> - url : (.*)\.jpg$</div><div class="line">   script : $1.jpg</div><div class="line"> - url : (.*)\.gif$</div><div class="line">   script : $1.gif</div><div class="line"> - url : (.*)\.png$</div><div class="line">   script : $1.png</div><div class="line"> - url : (.*)\.jpeg$</div><div class="line">   script : $1.jpeg</div><div class="line"> - url : (.*)\.html$</div><div class="line">   script : $1.html</div><div class="line"> - url : /sitemap.html$</div><div class="line">   script : sitemap.html</div><div class="line"> - url : (.*).xml$</div><div class="line">   script : $1.xml</div><div class="line"> - url : (.*)\.php$</div><div class="line">   script : $1.php</div><div class="line"> - url : /favicon.ico$</div><div class="line">   script : favicon.ico</div><div class="line"> - url : /wp\-admin/</div><div class="line">   script : /wp-admin/index.php</div><div class="line"> - url : (.*)</div><div class="line">   script: index.php</div><div class="line"> </div><div class="line"> - expire : .jpg modify 10 years</div><div class="line"> - expire : .swf modify 10 years</div><div class="line"> - expire : .png modify 10 years</div><div class="line"> - expire : .gif modify 10 years</div><div class="line"> - expire : .JPG modify 10 years</div><div class="line"> - expire : .ico modify 10 years</div></pre></td></tr></table></figure>
+<p>结束</p>
+
+
+            <!-- Tags -->
+            
+
+
+<div class="tags">
+    
+</div>
+
+
+
+            <!-- Comments -->
+            <div>
+                
+    <hr />
+    <h3>评论：</h3>
+
+    <div class="ds-thread" data-thread-key="_posts/bae-question.md" data-title="使用百度Bae遇到的问题及解决方法" data-url="http://hanzi.ml/bae-question/"></div>
+
+
+
+
+            </div>
+        </div><!-- end content -->
+    </section>
+</section><!-- end main -->
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="/js/jquery.js"></script>
+
+<!-- Custom Code -->
+<script src="/js/main.js"></script>
+
+<!-- Gallery -->
+<script src="/js/featherlight.min.js"></script>
+
+<!-- Duoshuo Comments -->
+
+
+<script type="text/javascript">
+
+var duoshuoQuery = {short_name:"hantongxue"};  
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+
+
+
+</body>
+
+</html>
