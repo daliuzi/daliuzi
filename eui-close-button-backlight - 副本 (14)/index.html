@@ -1,17 +1,201 @@
-extends includes/layout
+<!DOCTYPE html>
+<html lang="zh-cn">
 
-block content
-  include includes/article
-      
-  - var relatedPosts = related_posts(page, theme.related_posts);
-  
-  if relatedPosts.length
-    section.related-posts
-      h3 Related posts
-      each post in relatedPosts
-        .related-posts__item__wrapper
-          a.related-posts__item(href=url_for(post.path))
-            - var banner = bannerOf(post) || theme.default.url;
-            .related-posts__item__background(style="background-image: url('#{ banner }')")
-            .related-posts__item__overlay
-            span.related-posts__item__title= post.title || 'Untitled'
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+
+    <!--Description-->
+    
+        <meta name="description" content="红红火火恍恍惚惚">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Hank">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="乐视EUI关闭按键灯"/>
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="Hanzi"/>
+
+    <!--Page Cover-->
+    
+        <meta property="og:image" content="undefined"/>
+    
+
+    <!-- Title -->
+    
+    <title>乐视EUI关闭按键灯 - Hanzi</title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/main.css">
+
+    <!--[if lt IE 9]>
+
+	<script src="/js/html5shiv.js"></script>
+	<script src="/js/respond.min.js"></script>
+
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link rel="stylesheet" href="/css/featherlight.min.css">
+
+    <!-- Google Analytics -->
+    
+
+
+</head>
+
+<body>
+
+<!-- Menu -->
+<!-- Navigation -->
+<header>
+    <div class="logo">
+        <a href="/">Hanzi</a>
+    </div><!-- end logo -->
+
+    <div id="menu_icon"></div>
+    <nav>
+        <ul>
+            
+            <li>
+                <a href="/">首页</a>
+            </li>
+            
+            <li>
+                <a href="/archives">归档</a>
+            </li>
+            
+        </ul>
+    </nav><!-- end navigation menu -->
+
+    <div class="footer clearfix">
+        <ul class="social clearfix">
+            
+                <li><a href="https://www.facebook.com/" class="twitter" target="_blank" data-title="Twitter"></a></li>
+            
+            
+                <li><a href="https://www.facebook.com/" class="fb" target="_blank" data-title="Facebook"></a></li>
+            
+            
+                <li><a href="https://www.behance.net/" class="behance" target="_blank" data-title="Behance"></a></li>
+            
+            
+                <li><a href="https://plus.google.com/+Pixelhint/posts" class="google" target="_blank" data-title="Google+"></a></li>
+            
+            
+                <li><a href="https://dribbble.com/pixelhint" class="dribble" target="_blank" data-title="Dribble"></a></li>
+            
+            
+        </ul><!-- end social -->
+
+        <div class="rights">
+            <p>Copyright © 2014 magnetic.</p>
+            <p>Template by <a href="http://pixelhint.com/magnetic-free-html5-responsive-photography-website-template/">Pixelhint.com</a></p>
+            <p>Hexo Theme by <a href="http://www.codeblocq.com/">Jonathan K.</a></p>
+        </div><!-- end rights -->
+    </div ><!-- end footer -->
+</header><!-- end header -->
+
+<!-- Main Content -->
+<section class="main clearfix">
+
+    <section class="top" style="background: url('/img/1300x500.jpg');">
+        <div class="wrapper content_header clearfix">
+            
+
+<div class="work_nav">
+
+    <ul class="btn clearfix">
+        
+        <li><a href="/eui-close-button-backlight - 副本 (13)/" class="previous" data-title="乐视EUI关闭按键灯"></a></li>
+        
+        <li><a href="/" class="grid" data-title="首页"></a></li>
+        
+        <li><a href="/eui-close-button-backlight - 副本 (2)/" class="next" data-title="乐视EUI关闭按键灯"></a></li>
+        
+    </ul>
+
+</div><!-- end work_nav -->
+            <h1 class="title">乐视EUI关闭按键灯</h1>
+        </div>
+    </section><!-- end top -->
+
+    <section class="wrapper">
+        <div class="content">
+
+            <!-- Gallery -->
+            
+
+            <!-- Content -->
+            <p>手上的这款乐视1s按键灯在夜晚状态下透光严重，所以想关掉它，无奈系统中并未有此选项，所以，在智友论坛看到了一篇教程《<a href="http://bbs.zhiyoo.com/thread-12423593-1-2.html" target="_blank" rel="external">小白教程 | 简单3步 无需繁杂步骤！</a>》，使用后有效，开启按键震动，看起来舒服很多。<br><a id="more"></a><br><img src="https://source.daliuzi.cn/picture/20160902343.png" alt="乐视1s" title="乐视1s"></p>
+<h2 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h2><p>首先手机需要root，乐视1s可参见上篇文章《<a href="http://daliuzi.cn/le1s-recovery-root/" target="_blank" rel="external">乐视1s刷第三方Recovery获取Root权限</a>》</p>
+<h2 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h2><p>安装RE管理器，可在应用商店下载</p>
+<h2 id="第三步"><a href="#第三步" class="headerlink" title="第三步"></a>第三步</h2><p>按照路径找到<code>sys/class/leds/button-backlight/brightness</code></p>
+<h2 id="第四步"><a href="#第四步" class="headerlink" title="第四步"></a>第四步</h2><p>brightness文件设置为全读，全执行，保存即可关闭按键灯，重启后会失效。</p>
+<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>用Hexo发布的第一篇文章，试下水。。。。</p>
+
+
+            <!-- Tags -->
+            
+
+
+<div class="tags">
+    <a href="/tags/乐视1s/">乐视1s</a>
+</div>
+
+
+
+            <!-- Comments -->
+            <div>
+                
+    <hr />
+    <h3>评论：</h3>
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+            </div>
+        </div><!-- end content -->
+    </section>
+</section><!-- end main -->
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="/js/jquery.js"></script>
+
+<!-- Custom Code -->
+<script src="/js/main.js"></script>
+
+<!-- Gallery -->
+<script src="/js/featherlight.min.js"></script>
+
+<!-- Disqus Comments -->
+
+<script type="text/javascript">
+    var disqus_shortname = 'daliuzi';
+
+    (function(){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+</body>
+
+</html>

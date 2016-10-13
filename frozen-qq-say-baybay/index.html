@@ -1,17 +1,244 @@
-extends includes/layout
+<!DOCTYPE html>
+<html lang="zh-cn">
 
-block content
-  include includes/article
-      
-  - var relatedPosts = related_posts(page, theme.related_posts);
-  
-  if relatedPosts.length
-    section.related-posts
-      h3 Related posts
-      each post in relatedPosts
-        .related-posts__item__wrapper
-          a.related-posts__item(href=url_for(post.path))
-            - var banner = bannerOf(post) || theme.default.url;
-            .related-posts__item__background(style="background-image: url('#{ banner }')")
-            .related-posts__item__overlay
-            span.related-posts__item__title= post.title || 'Untitled'
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+
+    <!--Description-->
+    
+        <meta name="description" content="红红火火恍恍惚惚">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Hank">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="腾讯QQ账号被永久冻结"/>
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="Hanzi"/>
+
+    <!--Page Cover-->
+    
+        <meta property="og:image" content="undefined"/>
+    
+
+    <!-- Title -->
+    
+    <title>腾讯QQ账号被永久冻结 - Hanzi</title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/main.css">
+
+    <!--[if lt IE 9]>
+
+	<script src="/js/html5shiv.js"></script>
+	<script src="/js/respond.min.js"></script>
+
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link rel="stylesheet" href="/css/featherlight.min.css">
+
+    <!-- Google Analytics -->
+    
+
+
+</head>
+
+<body>
+
+<!-- Menu -->
+<!-- Navigation -->
+<header>
+    <div class="logo">
+        <a href="/">Hanzi</a>
+    </div><!-- end logo -->
+
+    <div id="menu_icon"></div>
+    <nav>
+        <ul>
+            
+            <li>
+                <a href="/">首页</a>
+            </li>
+            
+            <li>
+                <a href="/archives">归档</a>
+            </li>
+            
+        </ul>
+    </nav><!-- end navigation menu -->
+
+    <div class="footer clearfix">
+        <ul class="social clearfix">
+            
+                <li><a href="https://www.facebook.com/" class="twitter" target="_blank" data-title="Twitter"></a></li>
+            
+            
+                <li><a href="https://www.facebook.com/" class="fb" target="_blank" data-title="Facebook"></a></li>
+            
+            
+                <li><a href="https://www.behance.net/" class="behance" target="_blank" data-title="Behance"></a></li>
+            
+            
+                <li><a href="https://plus.google.com/+Pixelhint/posts" class="google" target="_blank" data-title="Google+"></a></li>
+            
+            
+                <li><a href="https://dribbble.com/pixelhint" class="dribble" target="_blank" data-title="Dribble"></a></li>
+            
+            
+        </ul><!-- end social -->
+
+        <div class="rights">
+            <p>Copyright © 2014 magnetic.</p>
+            <p>Template by <a href="http://pixelhint.com/magnetic-free-html5-responsive-photography-website-template/">Pixelhint.com</a></p>
+            <p>Hexo Theme by <a href="http://www.codeblocq.com/">Jonathan K.</a></p>
+        </div><!-- end rights -->
+    </div ><!-- end footer -->
+</header><!-- end header -->
+
+<!-- Main Content -->
+<section class="main clearfix">
+
+    <section class="top" style="background: url('https://blog.hinpc.com/img/2014/20141028-2.jpg');">
+        <div class="wrapper content_header clearfix">
+            
+
+<div class="work_nav">
+
+    <ul class="btn clearfix">
+        
+        <li><a href="/eui-close-button-backlight/" class="previous" data-title="乐视EUI关闭按键灯"></a></li>
+        
+        <li><a href="/" class="grid" data-title="首页"></a></li>
+        
+        <li><a href="/hello-world/" class="next" data-title="Hello World"></a></li>
+        
+    </ul>
+
+</div><!-- end work_nav -->
+            <h1 class="title">腾讯QQ账号被永久冻结</h1>
+        </div>
+    </section><!-- end top -->
+
+    <section class="wrapper">
+        <div class="content">
+
+            <!-- Gallery -->
+            
+
+            <!-- Content -->
+            <h1 id="Magnetic-Blog-Hexo"><a href="#Magnetic-Blog-Hexo" class="headerlink" title="Magnetic Blog Hexo"></a>Magnetic Blog Hexo</h1><p><img src="http://www.codeblocq.com/img/hexo-theme-thumbnail/Magnetic.png" alt=""></p>
+<p>Hexo implementation of the free <a href="http://pixelhint.com/magnetic-free-html5-responsive-photography-website-template/" target="_blank" rel="external">HTML5 Magnetic Template</a></p>
+<p>Magnetic is a photography/design portfolio oriented, responsive theme. <a href="http://www.codeblocq.com/assets/projects/hexo-theme-magnetic/" target="_blank" rel="external">Demo here</a>.</p>
+<h2 id="Features-Overview"><a href="#Features-Overview" class="headerlink" title="Features Overview"></a>Features Overview</h2><ul>
+<li>Disqus and Facebook comments</li>
+<li>Google Analytics</li>
+<li>Cover image for posts and pages</li>
+<li>Tags Support</li>
+<li>Responsive Images</li>
+<li>Image Gallery</li>
+<li>Social Accounts configuration</li>
+<li>Pagination</li>
+</ul>
+<h2 id="Not-Supported"><a href="#Not-Supported" class="headerlink" title="Not Supported"></a>Not Supported</h2><ul>
+<li>Post Categories will not be displayed</li>
+<li>Posts and Pages Dates not displayed anywhere </li>
+</ul>
+<h2 id="External-libraries-used"><a href="#External-libraries-used" class="headerlink" title="External libraries used"></a>External libraries used</h2><ul>
+<li><a href="http://noelboss.github.io/featherlight/" target="_blank" rel="external">FeatherLight.js</a> (Gallery)</li>
+<li><a href="https://jquery.com/" target="_blank" rel="external">jQuery</a></li>
+</ul>
+<h2 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git clone https://github.com/klugjo/hexo-theme-magnetic themes/magnetic</div></pre></td></tr></table></figure>
+<p>Then update your blog’s main <code>_config.yml</code> to set the theme to <code>magnetic</code>:</p>
+<p>i.e:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"># Extensions</div><div class="line">## Plugins: http://hexo.io/plugins/</div><div class="line">## Themes: http://hexo.io/themes/</div><div class="line">theme: magnetic</div></pre></td></tr></table></figure>
+<h2 id="Theme-Configuration"><a href="#Theme-Configuration" class="headerlink" title="Theme Configuration"></a>Theme Configuration</h2><p>The theme’s global configuration is done in <code>/themes/hexo-theme-magnetic/_config.yml</code>.</p>
+<h3 id="Menu"><a href="#Menu" class="headerlink" title="Menu"></a>Menu</h3><p>The menu is configured in the theme’s <code>_config.yml</code>.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"># Header</div><div class="line">menu:</div><div class="line">  Home: /</div><div class="line">  Archives: /archives</div></pre></td></tr></table></figure>
+<p>The object key is the label and the value is the path.</p>
+<h3 id="Default-post-title"><a href="#Default-post-title" class="headerlink" title="Default post title"></a>Default post title</h3><p>The default post title (used when no title is specified) is configured in the theme’s <code>_config.yml</code>.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># Default post title</div><div class="line">default_post_title: Untitled</div></pre></td></tr></table></figure>
+<h3 id="Default-index-page-cover-image"><a href="#Default-index-page-cover-image" class="headerlink" title="Default index page cover image"></a>Default index page cover image</h3><p>You can specify a default thumbnail for posts on the index page (Home page). This image will be used if you forget to specify an image in the post’s front matter.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># Default post cover index page</div><div class="line">default_cover_index: &quot;http://placehold.it/450x450&quot;</div></pre></td></tr></table></figure>
+<h3 id="Default-post-page-cover-image"><a href="#Default-post-page-cover-image" class="headerlink" title="Default post page cover image"></a>Default post page cover image</h3><p>You can specify a default thumbnail for posts/pages on the post/page page (Detail Page). This image will be used if you forget to specify an image in the post’s front matter.</p>
+<h1 id="Default-post-cover-index-page"><a href="#Default-post-cover-index-page" class="headerlink" title="Default post cover index page"></a>Default post cover index page</h1><p>default_cover_detail: “<a href="http://placehold.it/1300x500" target="_blank" rel="external">http://placehold.it/1300x500</a>“</p>
+<h3 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h3><p>The comments provider is specified in the theme’s <code>_config.yml</code>. If you specify both a <code>disqus_shortname</code> and a <code>facebook.appid</code> there will be 2 sets of comment per post. So choose one.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"># Comments. Choose one by filling up the information</div><div class="line">comments:</div><div class="line">  # Disqus comments</div><div class="line">  disqus_shortname: klugjotest</div><div class="line">  # Facebook comments</div><div class="line">  facebook:</div><div class="line">    appid: 123456789012345</div><div class="line">    comment_count: 5</div><div class="line">    comment_colorscheme: light</div></pre></td></tr></table></figure>
+<h3 id="Google-Analytics"><a href="#Google-Analytics" class="headerlink" title="Google Analytics"></a>Google Analytics</h3><p>The Google Analytics Tracking ID is configured in the theme’s <code>_config.yml</code>.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># Google Analytics Tracking ID</div><div class="line">google_analytics:</div></pre></td></tr></table></figure>
+<h3 id="Social-Account"><a href="#Social-Account" class="headerlink" title="Social Account"></a>Social Account</h3><p>Setup the links to your social pages in the theme’s <code>_config.yml</code>. Links are in the footer.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"># Social Accounts</div><div class="line">twitter_url:</div><div class="line">facebook_url:</div><div class="line">behance_url:</div><div class="line">googleplus_url:</div><div class="line">dribble_url: </div><div class="line">rss_url:</div></pre></td></tr></table></figure>
+<h2 id="Post-Custom-Configuration"><a href="#Post-Custom-Configuration" class="headerlink" title="Post Custom Configuration"></a>Post Custom Configuration</h2><p>For each post, you can specify additional information in the <a href="https://hexo.io/docs/front-matter.html" target="_blank" rel="external">front matter</a></p>
+<h3 id="Post’s-Index-Thumbnail"><a href="#Post’s-Index-Thumbnail" class="headerlink" title="Post’s Index Thumbnail"></a>Post’s Index Thumbnail</h3><p>Use <code>cover_index</code> to specify an image that will be used for that post on the Home page (also knows as index)</p>
+<p>Example:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cover_index: /assets/work1.jpg</div></pre></td></tr></table></figure>
+<h3 id="Post’s-Detail-Thumbnail"><a href="#Post’s-Detail-Thumbnail" class="headerlink" title="Post’s Detail Thumbnail"></a>Post’s Detail Thumbnail</h3><p>Use <code>cover_detail</code> to specify an image that will be used for that post on the Detail page for that post.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cover_detail: /assets/hero_image.jpg</div></pre></td></tr></table></figure>
+<h2 id="Creator"><a href="#Creator" class="headerlink" title="Creator"></a>Creator</h2><p>This theme was created by <a href="http://pixelhint.com/" target="_blank" rel="external">Pixel Hint</a> and adapted for Hexo by <a href="http://www.codeblocq.com/" target="_blank" rel="external">Jonathan Klughertz</a>.</p>
+<h2 id="Bugs"><a href="#Bugs" class="headerlink" title="Bugs"></a>Bugs</h2><p>If you have a question, feature request or a bug you need me to fix, please <a href="https://github.com/klugjo/hexo-theme-magnetic/issues/new" target="_blank" rel="external">click here</a> to file an issue.</p>
+
+
+            <!-- Tags -->
+            
+
+
+<div class="tags">
+    <a href="/tags/腾讯QQ/">腾讯QQ</a>
+</div>
+
+
+
+            <!-- Comments -->
+            <div>
+                
+    <hr />
+    <h3>评论：</h3>
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+            </div>
+        </div><!-- end content -->
+    </section>
+</section><!-- end main -->
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="/js/jquery.js"></script>
+
+<!-- Custom Code -->
+<script src="/js/main.js"></script>
+
+<!-- Gallery -->
+<script src="/js/featherlight.min.js"></script>
+
+<!-- Disqus Comments -->
+
+<script type="text/javascript">
+    var disqus_shortname = 'daliuzi';
+
+    (function(){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+</body>
+
+</html>
